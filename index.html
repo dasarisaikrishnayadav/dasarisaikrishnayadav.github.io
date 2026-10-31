@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Saikrishna Dasari — Information Technology graduate, developer and technology enthusiast." />
+  <title>Saikrishna Dasari | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080d18;--panel:#101a2b;--panel2:#0c1422;--text:#edf4ff;--muted:#9aaac1;--line:rgba(160,190,230,.15);--blue:#55a7ff;--cyan:#63e0dc;--max:1120px}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 78% 5%,rgba(35,105,180,.18),transparent 34%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 42px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,13,24,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font:700 19px "Space Grotesk";letter-spacing:-.5px}.brand span{color:var(--blue)}
+    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:13px}.navlinks a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:9px;padding:7px 11px}
+    section{padding:88px 0;scroll-margin-top:70px}.hero{min-height:calc(100vh - 72px);display:grid;align-items:center;padding:70px 0 90px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan)}
+    h1,h2,h3{font-family:"Space Grotesk";line-height:1.12;margin:0}
+    h1{font-size:clamp(42px,6.5vw,76px);letter-spacing:-3px;margin:20px 0}
+    h1 span{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:17px;color:var(--muted);max-width:650px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+    .btn{padding:12px 19px;border-radius:10px;font-weight:700;font-size:14px;border:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;transition:.2s}
+    .primary{background:linear-gradient(110deg,#277bd5,#36b8bd);color:#06101b;border:0}.btn:hover{transform:translateY(-3px)}
+    .profile-wrap{justify-self:center;position:relative;width:min(330px,80vw);aspect-ratio:1}
+    .profile-wrap:before{content:"";position:absolute;inset:-14px;border:1px solid rgba(85,167,255,.42);border-radius:28px;transform:rotate(7deg)}
+    .profile-wrap:after{content:"";position:absolute;inset:-27px;border:1px solid rgba(99,224,220,.2);border-radius:32px;transform:rotate(-7deg)}
+    .profile{width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:24px;border:1px solid rgba(255,255,255,.15);position:relative;z-index:1;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+    .section-head{margin-bottom:34px}.section-head h2{font-size:clamp(30px,4vw,43px);letter-spacing:-1.5px;margin:12px 0}.section-head p{color:var(--muted);max-width:650px;margin:0}
+    .grid{display:grid;gap:18px}.about-grid{grid-template-columns:1.1fr .9fr}
+    .card{background:linear-gradient(145deg,rgba(18,31,51,.95),rgba(12,20,34,.95));border:1px solid var(--line);border-radius:17px;padding:25px}
+    .card p{color:var(--muted);margin:10px 0 0}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    .fact{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}.fact small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1px}.fact strong{font-size:14px}
+    .skills{grid-template-columns:repeat(3,1fr)}.skill-group h3{font-size:17px;margin-bottom:14px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid var(--line);background:rgba(255,255,255,.035);padding:7px 10px;border-radius:8px;color:#c7d7eb;font-size:12px}
+    .projects{grid-template-columns:repeat(2,1fr)}.project{display:flex;flex-direction:column;min-height:245px}.project .number{color:var(--cyan);font:600 12px "Space Grotesk";letter-spacing:1px}.project h3{font-size:21px;margin:13px 0 5px}.project p{font-size:14px;flex:1}.project .stack{color:#82baff;font-size:12px;margin-top:18px}
+    .timeline{display:grid;gap:15px}.timeline-item{display:grid;grid-template-columns:160px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}.date{color:var(--cyan);font-size:13px;font-weight:700}.timeline-item h3{font-size:18px}.timeline-item p{color:var(--muted);margin:5px 0 0;font-size:14px}
+    .certs{grid-template-columns:repeat(2,1fr)}.cert{padding:18px}.cert h3{font-size:15px}.cert p{font-size:13px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-link{display:flex;align-items:center;gap:13px;padding:15px;border:1px solid var(--line);border-radius:12px;margin-top:10px;color:#dceaff}.contact-link span{color:var(--muted);font-size:12px;display:block}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px;text-align:center}
+    .muted{color:var(--muted)}.note{font-size:12px;color:var(--muted);margin-top:16px}
+    @media(max-width:800px){.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.profile-wrap{grid-row:1;width:220px;margin:15px auto 20px}.hero{padding:55px 0}.hero-grid{gap:28px}.skills{grid-template-columns:1fr 1fr}.navlinks{display:none;position:absolute;top:71px;left:0;right:0;padding:20px;background:#0b1423;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}}
+    @media(max-width:560px){section{padding:65px 0}.projects,.certs,.skills{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:5px}h1{letter-spacing:-2px}.wrap{width:min(100% - 30px,var(--max))}}
+  </style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#home">SAIKRISHNA<span>.</span></a>
+  <div class="navlinks" id="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+  <button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><div class="eyebrow"><i class="dot"></i> Information Technology Graduate</div>
+    <h1>Hello, I'm<br><span>Saikrishna Dasari</span></h1>
+    <p class="lead">I’m an Information Technology graduate interested in software development, machine learning, data analytics and web technologies. I enjoy turning ideas into useful digital solutions and continuously building my technical skills.</p>
+    <div class="actions"><a class="btn primary" href="assets/Saikrishna_Dasari_Resume.pdf" download>Download Resume ↓</a><a class="btn" href="#contact">Get in touch ↗</a></div>
+  </div>
+  <div class="profile-wrap"><img class="profile" src="assets/profile.jpg" alt="Portrait of Saikrishna Dasari"></div>
+</div></section>
+
+<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">01 / About me</div><h2>A little about my journey</h2><p>Focused on learning, collaboration and building practical technology solutions.</p></div>
+<div class="grid about-grid"><div class="card"><h3>Who I am</h3><p>I completed a B.Tech in Information Technology at Anurag Group of Institutions. My academic and project experience includes Python programming, web development, machine learning and data analytics. I’m eager to take on new challenges, contribute to a team and grow as a software professional.</p></div>
+<div class="card"><h3>Quick facts</h3><div class="facts"><div class="fact"><small>Education</small><strong>B.Tech – IT</strong></div><div class="fact"><small>CGPA</small><strong>8.90 / 10</strong></div><div class="fact"><small>Based in</small><strong>Hyderabad, India</strong></div><div class="fact"><small>Focus</small><strong>Software & Data</strong></div></div></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap"><div class="section-head"><div class="eyebrow">02 / Capabilities</div><h2>Skills & technologies</h2><p>Tools and concepts covered through my education, training and projects.</p></div>
+<div class="grid skills">
+  <div class="card skill-group"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">C</span><span class="tag">C#</span><span class="tag">JavaScript</span></div></div>
+  <div class="card skill-group"><h3>Web development</h3><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span><span class="tag">Web Development</span></div></div>
+  <div class="card skill-group"><h3>Data & machine learning</h3><div class="tags"><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Scikit-learn</span><span class="tag">Streamlit</span><span class="tag">Power BI</span><span class="tag">Tableau</span></div></div>
+  <div class="card skill-group"><h3>Tools</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">MS Excel</span><span class="tag">MS Office</span><span class="tag">Canva</span></div></div>
+  <div class="card skill-group"><h3>Database</h3><div class="tags"><span class="tag">MySQL</span><span class="tag">DBMS</span></div></div>
+  <div class="card skill-group"><h3>Core concepts</h3><div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span><span class="tag">Data Analytics</span><span class="tag">Artificial Intelligence</span></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><div class="section-head"><div class="eyebrow">03 / Selected work</div><h2>Projects I've worked on</h2><p>Academic and personal projects that helped me apply concepts to practical problems.</p></div>
+<div class="grid projects">
+  <article class="card project"><div class="number">PROJECT 01</div><h3>Crypto Price Prediction Using ML</h3><p>Built a Streamlit cryptocurrency analysis and prediction application using historical market data from the CoinGecko API. Added RSI, MACD and moving-average indicators, interactive visualizations and model evaluation using RMSE, MAE, MSE and R².</p><div class="stack">Python · Streamlit · Pandas · NumPy · Scikit-learn · CoinGecko API</div></article>
+  <article class="card project"><div class="number">PROJECT 02</div><h3>ITECH 2K26 Department Magazine</h3><p>Designed and published the department magazine using Canva. Created layouts, graphics and typography, and collaborated with faculty and students to organize technical and creative content.</p><div class="stack">Canva · Graphic Design · Content Coordination</div></article>
+  <article class="card project"><div class="number">PROJECT 03</div><h3>PG Life</h3><p>Developed a responsive web platform to help students and working professionals explore paying guest accommodations, property details, amenities, pricing and locations.</p><div class="stack">Web Development · Responsive UI</div></article>
+  <article class="card project"><div class="number">PROJECT 04</div><h3>Fit Genie</h3><p>Developed a fitness tracking application to monitor workouts and daily activities. Included input validation and a responsive interface, then tested and debugged the application for stability.</p><div class="stack">Python · HTML5 · CSS3</div></article>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><div class="section-head"><div class="eyebrow">04 / Experience</div><h2>Work experience</h2></div>
+<div class="card timeline">
+  <div class="timeline-item"><div class="date">Aug 2026 – Present</div><div><h3>Operations Executive · ApplyRyt</h3><p>Virtual · Operations role</p></div></div>
+  <div class="timeline-item"><div class="date">Jun 2024 – Sep 2024</div><div><h3>Web Development Intern · Internshala</h3><p>Virtual · Web development internship</p></div></div>
+</div></div></section>
+
+<section id="education"><div class="wrap"><div class="section-head"><div class="eyebrow">05 / Education & learning</div><h2>Education and certifications</h2></div>
+<div class="card timeline">
+  <div class="timeline-item"><div class="date">2022 – 2026</div><div><h3>B.Tech, Information Technology</h3><p>Anurag Group of Institutions · CGPA: 8.90/10</p></div></div>
+  <div class="timeline-item"><div class="date">2022</div><div><h3>Senior Secondary (XII), TSBIE</h3><p>Pragathi Junior College, Nalgonda · Arts · 94.80%</p></div></div>
+  <div class="timeline-item"><div class="date">2020</div><div><h3>Secondary (X), TSBSE</h3><p>St. John's High School, Miryalaguda · CGPA: 10.00/10</p></div></div>
+</div>
+<div style="height:18px"></div><div class="grid certs">
+  <div class="card cert"><h3>Full Stack JAVA Development</h3><p>ExcelR · Dec 2025 – Jun 2026</p></div>
+  <div class="card cert"><h3>Power BI With Excel</h3><p>Coursera · Sep 2024 – Oct 2024</p></div>
+  <div class="card cert"><h3>Web Development</h3><p>Internshala · Jun 2024 – Sep 2024</p></div>
+  <div class="card cert"><h3>Web Development Certification</h3><p>Internshala · Jun 2024 – Sep 2024</p></div>
+  <div class="card cert"><h3>Python Programming</h3><p>Codetech IT Solutions · Dec 2023 – Jun 2024</p></div>
+  <div class="card cert"><h3>Introduction to Python</h3><p>Infosys Springboard · Oct 2023 – Dec 2023</p></div>
+  <div class="card cert"><h3>Microsoft Excel Certification</h3><p>Coursera · May 2023 – Jul 2023</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="section-head"><div class="eyebrow">06 / Contact</div><h2>Let's connect</h2><p>Have an opportunity, project idea or just want to connect? Feel free to reach out.</p></div>
+<div class="contact-grid"><div class="card"><h3>Contact details</h3>
+  <a class="contact-link" href="mailto:dasarisaikrishna36@gmail.com">✉ <div>Email<span>dasarisaikrishna36@gmail.com</span></div></a>
+  <a class="contact-link" href="tel:+916302603910">☎ <div>Phone<span>+91 6302603910</span></div></a>
+  <a class="contact-link" href="https://www.linkedin.com/in/saikrishna-dasari-918400360" target="_blank" rel="noopener">↗ <div>LinkedIn<span>Connect professionally</span></div></a>
+  <a class="contact-link" href="https://www.instagram.com/saikrishnayadav.in" target="_blank" rel="noopener">◎ <div>Instagram<span>@saikrishnayadav.in</span></div></a>
+  <a class="contact-link" href="https://github.com/dasarisaikrishnayadav" target="_blank" rel="noopener">⌘ <div>GitHub<span>github.com/dasarisaikrishnayadav</span></div></a>
+</div><div class="card"><h3>Open to opportunities</h3><p>I’m interested in opportunities where I can learn, contribute and grow in technology-focused teams.</p><div class="actions"><a class="btn primary" href="mailto:dasarisaikrishna36@gmail.com?subject=Portfolio%20Contact">Email me ↗</a><a class="btn" href="assets/Saikrishna_Dasari_Resume.pdf" download>View resume ↓</a></div><a class="contact-link" href="https://github.com/dasarisaikrishnayadav" target="_blank" rel="noopener">⌘ <div>GitHub<span>github.com/dasarisaikrishnayadav</span></div></a></div></div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> Saikrishna Dasari · Designed with care.</div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const menu = document.getElementById('menu'), links = document.getElementById('navlinks');
+  menu.addEventListener('click',()=>links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
